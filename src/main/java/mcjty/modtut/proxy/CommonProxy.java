@@ -7,6 +7,8 @@ import mcjty.modtut.blocks.blinkingblock.BlinkingBlock;
 import mcjty.modtut.blocks.blinkingblock.BlinkingTileEntity;
 import mcjty.modtut.blocks.datablock.DataBlock;
 import mcjty.modtut.blocks.datablock.DataTileEntity;
+import mcjty.modtut.blocks.hoardercontainer.HoarderContainerBlock;
+import mcjty.modtut.blocks.hoardercontainer.HoarderContainerTileEntity;
 import mcjty.modtut.blocks.itempedestal.PedestalBlock;
 import mcjty.modtut.blocks.itempedestal.PedestalTileEntity;
 import mcjty.modtut.blocks.testcontainer.TestContainerBlock;
@@ -74,12 +76,14 @@ public class CommonProxy {
         event.getRegistry().register(new MultiTexturedBlock());
         event.getRegistry().register(new BakedModelBlock());
         event.getRegistry().register(new TestContainerBlock());
+        event.getRegistry().register(new HoarderContainerBlock());
         event.getRegistry().register(new DataBlock());
         event.getRegistry().register(new ModelBlock());
         event.getRegistry().register(new PedestalBlock());
 
         GameRegistry.registerTileEntity(BlinkingTileEntity.class, ModTut.MODID + "_blinkingblock");
         GameRegistry.registerTileEntity(TestContainerTileEntity.class, ModTut.MODID + "_testcontainerblock");
+        GameRegistry.registerTileEntity(HoarderContainerTileEntity.class, ModTut.MODID + "_hoardercontainerblock");
         GameRegistry.registerTileEntity(DataTileEntity.class, ModTut.MODID + "_datablock");
         GameRegistry.registerTileEntity(PedestalTileEntity.class, ModTut.MODID + "_pedestalblock");
     }
@@ -97,6 +101,7 @@ public class CommonProxy {
         event.getRegistry().register(new ItemBlock(ModBlocks.multiTexturedBlock).setRegistryName(ModBlocks.multiTexturedBlock.getRegistryName()));
         event.getRegistry().register(new ItemBlock(ModBlocks.bakedModelBlock).setRegistryName(ModBlocks.bakedModelBlock.getRegistryName()));
         event.getRegistry().register(new ItemBlock(ModBlocks.testContainerBlock).setRegistryName(ModBlocks.testContainerBlock.getRegistryName()));
+        event.getRegistry().register(new ItemBlock(ModBlocks.hoarderContainerBlock).setRegistryName(ModBlocks.hoarderContainerBlock.getRegistryName()));
         event.getRegistry().register(new ItemBlock(ModBlocks.dataBlock).setRegistryName(ModBlocks.dataBlock.getRegistryName()));
         event.getRegistry().register(new ItemBlock(ModBlocks.modelBlock).setRegistryName(ModBlocks.modelBlock.getRegistryName()));
         event.getRegistry().register(new ItemBlock(ModBlocks.pedestalBlock).setRegistryName(ModBlocks.pedestalBlock.getRegistryName()));

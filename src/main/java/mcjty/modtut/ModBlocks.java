@@ -4,6 +4,7 @@ import mcjty.modtut.blocks.*;
 import mcjty.modtut.blocks.bakedmodel.BakedModelBlock;
 import mcjty.modtut.blocks.blinkingblock.BlinkingBlock;
 import mcjty.modtut.blocks.datablock.DataBlock;
+import mcjty.modtut.blocks.hoardercontainer.HoarderContainerBlock;
 import mcjty.modtut.blocks.itempedestal.PedestalBlock;
 import mcjty.modtut.blocks.testcontainer.TestContainerBlock;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -38,6 +39,9 @@ public class ModBlocks {
 
     @GameRegistry.ObjectHolder("modtut:testcontainerblock")
     public static TestContainerBlock testContainerBlock;
+    
+    @GameRegistry.ObjectHolder("modtut:hoardercontainerblock")
+    public static HoarderContainerBlock hoarderContainerBlock;
 
     @GameRegistry.ObjectHolder("modtut:statetexturedblock")
     public static StateTexturedBlock stateTexturedBlock;
@@ -53,6 +57,7 @@ public class ModBlocks {
         blinkingBlock.initModel();
         pedestalBlock.initModel();
         testContainerBlock.initModel();
+        hoarderContainerBlock.initModel();
     }
 
     @SideOnly(Side.CLIENT)

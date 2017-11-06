@@ -1,5 +1,9 @@
 package mcjty.modtut;
 
+import mcjty.modtut.entity.EntityBreakerGolem;
+import mcjty.modtut.entity.EntityHoarderGolem;
+import mcjty.modtut.entity.RenderGolem;
+
 import mcjty.modtut.entity.EntityWeirdZombie;
 import mcjty.modtut.entity.RenderWeirdZombie;
 import net.minecraft.entity.EnumCreatureType;
@@ -17,6 +21,8 @@ public class ModEntities {
         // Every entity in our mod has an ID (local to this mod)
         int id = 1;
         EntityRegistry.registerModEntity(new ResourceLocation(ModTut.MODID, "weirdzombie"), EntityWeirdZombie.class, "WeirdZombie", id++, ModTut.instance, 64, 3, true, 0x996600, 0x00ff00);
+        EntityRegistry.registerModEntity(new ResourceLocation(ModTut.MODID, "breaker"), EntityBreakerGolem.class, "Breaker", id++, ModTut.instance, 64, 3, true, 0x996600, 0x00ff00);
+        EntityRegistry.registerModEntity(new ResourceLocation(ModTut.MODID, "hoarder"), EntityHoarderGolem.class, "Hoarder", id++, ModTut.instance, 64, 3, true, 0x996600, 0x00ff00);
 
         // We want our mob to spawn in Plains and ice plains biomes. If you don't add this then it will not spawn automatically
         // but you can of course still make it spawn manually
@@ -29,5 +35,7 @@ public class ModEntities {
     @SideOnly(Side.CLIENT)
     public static void initModels() {
         RenderingRegistry.registerEntityRenderingHandler(EntityWeirdZombie.class, RenderWeirdZombie.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntityBreakerGolem.class, RenderGolem.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntityHoarderGolem.class, RenderGolem.FACTORY);
     }
 }
